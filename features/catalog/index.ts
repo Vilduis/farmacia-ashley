@@ -1,0 +1,6 @@
+export { Catalog } from "./components/catalog"
+export { Featured } from "./components/featured"
+export { categories } from "./data/categories"
+export { products } from "./data/products"
+export { discountPercent } from "./lib"
+export type { Product } from "./types"

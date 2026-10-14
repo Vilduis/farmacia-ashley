@@ -1,15 +1,36 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google"
+import type { Metadata, Viewport } from "next"
+import { Inter, Sora } from "next/font/google"
 
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
+import { site } from "@/config/site"
+import { cn } from "@/lib/utils"
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'})
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 
-const fontMono = Geist_Mono({
+const sora = Sora({
   subsets: ["latin"],
-  variable: "--font-mono",
+  weight: ["400", "500", "600"],
+  variable: "--font-display",
 })
+
+export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
+  title: `${site.name} · Tu farmacia de confianza`,
+  description: site.description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "es_PE",
+    siteName: site.name,
+    title: `${site.name} · Tu farmacia de confianza`,
+    description: site.description,
+    images: [{ url: "/images/hero.jpg", alt: "Farmacéutico atendiendo a una clienta en el mostrador" }],
+  },
+}
+
+export const viewport: Viewport = {
+  themeColor: "#2b7468",
+}
 
 export default function RootLayout({
   children,
@@ -17,14 +38,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", inter.variable)}
-    >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
+    <html lang="es" className={cn("antialiased font-sans", inter.variable, sora.variable)}>
+      <body>{children}</body>
     </html>
   )
 }

@@ -1,0 +1,87 @@
+import type { Post } from "./types"
+
+export const posts: Post[] = [
+  {
+    slug: "guardar-medicamentos",
+    date: "2026-09-28",
+    title: "Cómo guardar tus medicamentos para que no pierdan efecto",
+    excerpt: "El calor, la luz y la humedad los degradan antes de su fecha de vencimiento.",
+    image: "/images/blog/medicamentos.jpg",
+    points: [
+      "Guárdalos en un cajón cerrado del dormitorio, no en el baño ni la cocina.",
+      "Mantenlos en su envase original y lejos del alcance de los niños.",
+      "Insulinas y algunos jarabes van en la refrigeradora, nunca en la puerta.",
+    ],
+    tip: "Lo vencido tráelo a la farmacia; no lo tires al desagüe.",
+  },
+  {
+    slug: "preguntas-farmaceutico",
+    date: "2026-09-21",
+    title: "Qué preguntarle a tu farmacéutico antes de comprar",
+    excerpt: "Tres preguntas rápidas que te ahorran tiempo, dinero y sustos.",
+    image: "/images/blog/farmaceutica.jpg",
+    points: [
+      "¿Interactúa con algo que ya tomo, incluidas vitaminas?",
+      "¿Cómo y a qué hora lo tomo: con comida o en ayunas?",
+      "¿Hay una versión genérica con el mismo principio activo?",
+    ],
+    tip: "Lleva una foto de todo lo que tomas: así revisamos interacciones en segundos.",
+  },
+  {
+    slug: "botiquin-familiar",
+    date: "2026-09-14",
+    title: "Botiquín familiar: lo básico que no debe faltar",
+    excerpt: "Marca lo que ya tienes y pide el resto en un solo mensaje.",
+    image: "/images/blog/atencion.jpg",
+    checklist: [
+      "Gasas estériles",
+      "Esparadrapo",
+      "Curitas",
+      "Venda elástica",
+      "Alcohol al 70 %",
+      "Termómetro digital",
+      "Paracetamol",
+      "Sales de rehidratación",
+    ],
+    tip: "Revísalo cada seis meses y repón lo usado o vencido.",
+  },
+  {
+    slug: "elegir-fps",
+    date: "2026-09-07",
+    title: "Protector solar: cómo elegir el FPS adecuado",
+    excerpt: "Importa menos el número que cuánto aplicas y cada cuánto lo renuevas.",
+    image: "/images/blog/consulta.jpg",
+    points: [
+      "Busca «amplio espectro»: protege de rayos UVA y UVB.",
+      "FPS 50 si pasas horas al aire libre o tienes piel clara.",
+      "Gel si tu piel es grasa; crema si es seca.",
+    ],
+    tip: "Renueva cada dos horas, aunque el día esté nublado.",
+  },
+  {
+    slug: "pastilleros",
+    date: "2026-08-31",
+    title: "Pastilleros semanales para no olvidar ninguna dosis",
+    excerpt: "De un vistazo sabes si ya tomaste la pastilla de la mañana.",
+    image: "/images/blog/pastillero.jpg",
+    points: [
+      "Llénalo una vez por semana, siempre el mismo día.",
+      "Elige uno con mañana, tarde y noche si tomas varias dosis.",
+      "Guarda las cajas originales para revisar dosis y vencimiento.",
+    ],
+    tip: "Súmale una alarma diaria en el celular y el hábito se forma solo.",
+  },
+  {
+    slug: "presion-en-casa",
+    date: "2026-08-24",
+    title: "Medir tu presión en casa: errores comunes",
+    excerpt: "Pequeños detalles cambian el resultado de la lectura.",
+    image: "/images/blog/presion.jpg",
+    points: [
+      "Espera 30 minutos después de caminar, tomar café o fumar.",
+      "Siéntate cinco minutos, con el brazo apoyado y sin hablar.",
+      "Toma dos lecturas con un minuto de diferencia y anota el promedio.",
+    ],
+    tip: "Lleva tu registro a la consulta; ante valores altos repetidos, ve al médico.",
+  },
+]
